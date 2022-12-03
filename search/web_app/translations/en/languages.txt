@@ -79,3 +79,4 @@ ut-main	u̠t-Ma'in
 wan	Wan
 yakut	Yakut
 yiddish	Yiddish
+kadar	Kadar

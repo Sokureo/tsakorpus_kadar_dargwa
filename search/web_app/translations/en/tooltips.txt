@@ -1,0 +1,39 @@
+noun	noun
+proper noun	proper noun
+adjective	adjective
+adverb	adverb
+conjunction	conjunction
+coordinating conjunction	coordinating conjunction
+subordinating conjunction	subordinating conjunction
+copula	copula
+coverb	coverb
+ideophone	ideophone
+interjection	interjection
+numeral	numeral
+particle	particle
+predicative particle	predicative particle
+postposition	postposition
+pronoun	pronoun
+demonstrative pronoun	demonstrative pronoun
+interrogative pronoun	interrogative pronoun
+personal pronoun	personal pronoun
+indefinite pronoun	indefinite pronoun
+reflexive pronoun	reflexive pronoun
+quantifier	quantifier
+aorist	aorist
+singular	singular
+causative	causative
+copula	copula
+converb	converb
+plural	plural
+dative	dative
+elative	elative
+ergative	ergative
+imperative	imperative
+locative	locative
+masdar	masdar
+adposition	adposition
+connective	connective
+coordinating connective	coordinating connective
+determiner	determiner
+preposition	preposition

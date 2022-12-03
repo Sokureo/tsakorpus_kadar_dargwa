@@ -79,3 +79,4 @@ ut-main	ут-маин
 wan	уан
 yakut	якутский
 yiddish	идиш
+kadar	кадарский
