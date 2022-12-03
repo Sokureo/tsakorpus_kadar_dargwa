@@ -1,1 +1,1 @@
-corpus_title	(ВВЕДИТЕ НАЗВАНИЕ КОРПУСА в translations/ru/corpus-specific.txt)
+corpus_title	Устный корпус кадарского даргинского

@@ -1,19 +1,18 @@
 {
-  "corpus_name": "",
+  "corpus_name": "kadar",
   "corpus_dir": "corpus",
   "meta_filename": "meta.csv",
   "error_log": "error.log",
   "meta_fields":
   [
-    "author",
-	"title"
   ],
   "meta_files_ext": false,
   "meta_files_dir": true,
   "meta_files_case_sensitive": true,
-  "languages": ["english"],
-  "json_indent": -1,
-  "gzip": true,
+  "languages": ["kadar", "russian", "english"],
+  "language_codes": {"ru": "russian", "dar": "dargwa"},
+  "json_indent": 1,
+  "gzip": false,
   "convert_quotes": true,
   "left_quot_mark": "«",
   "right_quot_mark": "»",

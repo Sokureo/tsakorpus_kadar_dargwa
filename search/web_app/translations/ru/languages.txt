@@ -59,3 +59,4 @@ udmurt	удмуртский
 ukrainian	украинский
 yakut	якутский
 yiddish	идиш
+kadar	кадарский

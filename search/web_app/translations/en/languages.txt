@@ -61,3 +61,4 @@ udmurt	Udmurt
 ukrainian	Ukrainian
 yakut	Yakut
 yiddish	Yiddish
+kadar	Kadar
