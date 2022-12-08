@@ -1,5 +1,6 @@
 {
   "corpus_name": "kadar",
+  "start_page_url": "http://lingconlab.ru/kadar_dargwa/",
   "input_format": "json",
   "debug": false,
   "media": false,
