@@ -20,6 +20,11 @@ from .auxiliary_functions import jsonp, gzipped, nocache, lang_sorting_key, copy
 from .search_pipelines import *
 
 
+@app.route('/')
+def start_page():
+    return render_template('start.html')
+
+
 @app.route('/search')
 @app.route('/search_minimalistic')
 def search_page():
