@@ -5,7 +5,7 @@ START_TIME="$(date -u +%s)"
 cd src_convertors/
 
 # Conversion to Tsakorpus JSON
-python  xml_flex2json.py
+python  eaf2json.py
 echo "Source conversion ready."
 
 rm -rf ../corpus/kadar
@@ -16,5 +16,5 @@ END_TIME="$(date -u +%s)"
 ELAPSED_TIME="$(($END_TIME-$START_TIME))"
 echo "Corpus files prepared in $ELAPSED_TIME seconds, finishing now."
 
-cd ../indexator
-python indexator.py
+#cd ../indexator
+#python indexator.py

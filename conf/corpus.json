@@ -3,7 +3,7 @@
   "start_page_url": "http://lingconlab.ru/kadar_dargwa/",
   "input_format": "json",
   "debug": false,
-  "media": false,
+  "media": true,
   "video": false,
   "default_view": "glossed",
   "media_length": 60,
@@ -39,9 +39,9 @@
     "en",
     "ru"
   ],
-  "all_language_search_enabled": false,
+  "all_language_search_enabled": true,
   "gloss_search_enabled": true,
-  "ambiguous_analyses": true,
+  "ambiguous_analyses": false,
   "lang_props":
   {
     "kadar":

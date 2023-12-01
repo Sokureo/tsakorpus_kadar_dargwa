@@ -1,5 +1,5 @@
 # Russian translations for Tsakorpus.
-# Copyright (C) 2017-2021 Timofey Arkhangelskiy
+# Copyright (C) 2017-2023 Timofey Arkhangelskiy
 # This file is distributed under the same license as the Tsakorpus project.
 # Timofey Arkhangelskiy <timarkh@gmail.com>, 2017-2021.
 #
@@ -763,7 +763,8 @@ msgstr "статистика"
 msgid "Full text (opens in a new tab)"
 msgstr "Полный текст (откроется в новой вкладке)"
 
-
+msgid "Virtual keyboard"
+msgstr "Виртуальная клавиатура"
 
 
 msgid "corpus_title"
@@ -799,6 +800,9 @@ msgstr "армянский"
 msgid "langname_armenian_translit"
 msgstr "армянский (транслит.)"
 
+msgid "langname_bangime"
+msgstr "бангери"
+
 msgid "langname_bashkir"
 msgstr "башкирский"
 
@@ -820,11 +824,17 @@ msgstr "китайский"
 msgid "langname_chuvash"
 msgstr "чувашский"
 
+msgid "langname_chuvash_cyr"
+msgstr "чувашский (кириллица)"
+
 msgid "langname_comments"
 msgstr "комментарии"
 
 msgid "langname_dargwa"
 msgstr "даргинский"
+
+msgid "langname_dogon"
+msgstr "догон"
 
 msgid "langname_english"
 msgstr "английский"
@@ -847,11 +857,23 @@ msgstr "французский"
 msgid "langname_german"
 msgstr "немецкий"
 
+msgid "langname_ginyanga"
+msgstr "гиньянга"
+
+msgid "langname_gizey"
+msgstr "гизей"
+
 msgid "langname_greek"
 msgstr "греческий"
 
+msgid "langname_guro"
+msgstr "гуро"
+
 msgid "langname_hill_mari"
 msgstr "горномарийский"
+
+msgid "langname_hungarian"
+msgstr "венгерский"
 
 msgid "langname_id"
 msgstr "ID"
@@ -859,14 +881,23 @@ msgstr "ID"
 msgid "langname_italian"
 msgstr "итальянский"
 
+msgid "langname_joola"
+msgstr "бандиал"
+
 msgid "langname_kadar"
 msgstr "кадарский"
+
+msgid "langname_kafire"
+msgstr "кафире"
 
 msgid "langname_kalmyk"
 msgstr "калмыцкий"
 
 msgid "langname_kamas"
 msgstr "камасинский"
+
+msgid "langname_kazakh"
+msgstr "казахский"
 
 msgid "langname_komi"
 msgstr "коми"
@@ -883,14 +914,29 @@ msgstr "коми-зырянский"
 msgid "langname_latvian"
 msgstr "латышский"
 
+msgid "langname_limba"
+msgstr "лимба"
+
 msgid "langname_lithuanian"
 msgstr "литовский"
+
+msgid "langname_macedonian"
+msgstr "македонский"
+
+msgid "langname_macedonian_cyr"
+msgstr "македонский (кириллица)"
 
 msgid "langname_meadow_mari"
 msgstr "луговой марийский"
 
 msgid "langname_moksha"
 msgstr "мокшанский"
+
+msgid "langname_mundabli"
+msgstr "мундабли"
+
+msgid "langname_mwan"
+msgstr "муан"
 
 msgid "langname_negative"
 msgstr "отрицательные"
@@ -928,8 +974,14 @@ msgstr "цыганский"
 msgid "langname_russian"
 msgstr "русский"
 
+msgid "langname_san"
+msgstr "сан"
+
 msgid "langname_selkup"
 msgstr "селькупский"
+
+msgid "langname_senufo"
+msgstr "сенуфо"
 
 msgid "langname_spanish"
 msgstr "испанский"
@@ -946,6 +998,9 @@ msgstr "цахурский"
 msgid "langname_tsakonian"
 msgstr "цаконский"
 
+msgid "langname_udihe"
+msgstr "улэгейский"
+
 msgid "langname_udmurt"
 msgstr "удмуртский"
 
@@ -954,6 +1009,12 @@ msgstr "украинский"
 
 msgid "langname_undefined"
 msgstr "неопределённый"
+
+msgid "langname_ut-main"
+msgstr "ут-маин"
+
+msgid "langname_wan"
+msgstr "уан"
 
 msgid "langname_yakut"
 msgstr "якутский"
@@ -1015,11 +1076,17 @@ msgstr "собиратель"
 msgid "metafield_country"
 msgstr "страна"
 
+msgid "metafield_date_of_recording"
+msgstr "дата записи"
+
 msgid "metafield_date_trans"
 msgstr "дата перевода"
 
 msgid "metafield_dialect"
 msgstr "диалект"
+
+msgid "metafield_filename"
+msgstr "имя файла"
 
 msgid "metafield_gender"
 msgstr "пол"
@@ -1090,6 +1157,9 @@ msgstr "страница"
 msgid "metafield_place"
 msgstr "место"
 
+msgid "metafield_place_of_recording"
+msgstr "место записи"
+
 msgid "metafield_post_type"
 msgstr "тип поста"
 
@@ -1116,6 +1186,18 @@ msgstr "пол (пост)"
 
 msgid "metafield_speaker"
 msgstr "говорящий"
+
+msgid "metafield_speaker_ID"
+msgstr "ID говорящего"
+
+msgid "metafield_speaker_gender"
+msgstr "пол говорящего"
+
+msgid "metafield_speaker_type"
+msgstr "тип говорящего"
+
+msgid "metafield_speaker_year_of_birth"
+msgstr "год рождения говорящего"
 
 msgid "metafield_speakers"
 msgstr "говорящие"
@@ -1201,6 +1283,9 @@ msgstr "не полностью"
 msgid "metavalue_interview"
 msgstr "интервью"
 
+msgid "metavalue_linguist"
+msgstr "лингвист"
+
 msgid "metavalue_male"
 msgstr "мужской"
 
@@ -1209,6 +1294,9 @@ msgstr "монолог"
 
 msgid "metavalue_movie"
 msgstr "фильм"
+
+msgid "metavalue_native"
+msgstr "носитель"
 
 msgid "metavalue_nonfiction"
 msgstr "нехудожественные"

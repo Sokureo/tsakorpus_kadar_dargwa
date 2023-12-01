@@ -19,7 +19,7 @@ class Eaf2JSON(Txt2JSON):
 
     mediaExtensions = {'.wav', '.mp3', '.mp4', '.avi', '.mov', '.mts'}
     rxSpaces = re.compile('[ \t]+')
-    rxLetters = re.compile('\w+')
+    rxLetters = re.compile('\\w+')
     bracketPairs = {
         ']': re.compile('\\[[^ \\]]*$'),
         ')': re.compile('\\([^ \\)]*$'),
@@ -47,6 +47,9 @@ class Eaf2JSON(Txt2JSON):
         self.rxIgnoreTokens = None
         self.set_ignore_tokens()
         self.usedMediaFiles = set()  # filenames of media fragments referenced in the JSONs
+        self.gloss_list = list()
+        self.parts_list = list()
+        self.all_gloss_list = list()
 
     def set_ignore_tokens(self):
         """
@@ -296,8 +299,10 @@ class Eaf2JSON(Txt2JSON):
                     if tierType == 'lemma':
                         ana['lex'] = contents
                     elif tierType == 'parts':
+                        self.parts_list.append(contents)
                         ana['parts'] = contents
                     elif tierType == 'gloss':
+                        self.gloss_list.append(contents)
                         ana['gloss'] = contents
                     elif tierType == 'pos' and len(contents) > 0:
                         ana['gr.pos'] = contents
@@ -312,6 +317,13 @@ class Eaf2JSON(Txt2JSON):
                 analysisTiers[-1] = [{}]
         if len(analysisTiers) <= 0 or (len(analysisTiers) == 1 and len(analysisTiers[0]) <= 0):
             return [{}]
+        for indx, item in enumerate(self.parts_list):
+            if item.startswith('-') and 'gloss' in ana and '-' not in ana['gloss'] and '=' not in ana['gloss']:
+                ana['gloss'] = '-' + ana['gloss']
+            elif item.endswith('-') and 'gloss' in ana and '-' not in ana['gloss'] and '=' not in ana['gloss']:
+                ana['gloss'] = ana['gloss'] + '-'
+            elif item.startswith('-') and item.endswith('-') and 'gloss' in ana and '-' not in ana['gloss'] and '=' not in ana['gloss']:
+                ana['gloss'] = '-' + ana['gloss'] + '-'
         for combination in itertools.product(*analysisTiers):
             ana = {}
             for partAna in combination:
@@ -349,14 +361,19 @@ class Eaf2JSON(Txt2JSON):
                                     curLex.add(ana[k])
                                     if 'gloss' in ana:
                                         curStemGloss.add(ana['gloss'])
+
+                if 'gloss' in ana and ana['gloss'] not in curStemGloss:
+                    self.all_gloss_list.append(ana['gloss'].strip('-'))
                 if 'lex' not in totalAna or len(totalAna['lex']) <= 0:
                     totalAna['lex'] = [l for l in sorted(curLex)]
                     if len(totalAna['lex']) == 1:
                         totalAna['lex'] = totalAna['lex'][0]
                 if 'trans_en' not in totalAna or len(totalAna['trans_en']) <= 0:
-                    totalAna['trans_en'] = [t for t in sorted(curStemGloss)]
+                    totalAna['trans_en'] = [t.strip('-') for t in sorted(curStemGloss)]
                     if len(totalAna['trans_en']) == 1:
                         totalAna['trans_en'] = totalAna['trans_en'][0]
+                if 'gloss' in totalAna:
+                    totalAna['gloss'] = totalAna['gloss'].strip('-')
                 analyses = [totalAna]
 
             for ana in analyses:
@@ -881,7 +898,9 @@ class Eaf2JSON(Txt2JSON):
         self.tlis = self.get_tlis(srcTree)
         self.build_segment_tree(srcTree)
         srcFileNode = srcTree.xpath('/ANNOTATION_DOCUMENT/HEADER/MEDIA_DESCRIPTOR')
-        if len(srcFileNode) > 0 and 'RELATIVE_MEDIA_URL' in srcFileNode[0].attrib:
+        if len(srcFileNode) > 1 and 'RELATIVE_MEDIA_URL' in srcFileNode[0].attrib:
+            srcFile = self.rxStripDir.sub('', html.unescape(srcFileNode[1].attrib['RELATIVE_MEDIA_URL']))
+        elif len(srcFileNode) > 0 and 'RELATIVE_MEDIA_URL' in srcFileNode[0].attrib:
             srcFile = self.rxStripDir.sub('', html.unescape(srcFileNode[0].attrib['RELATIVE_MEDIA_URL']))
         elif len(srcFileNode) > 0 and 'MEDIA_URL' in srcFileNode[0].attrib:
             srcFile = self.rxStripDir.sub('', html.unescape(srcFileNode[0].attrib['MEDIA_URL']))
@@ -928,7 +947,7 @@ class Eaf2JSON(Txt2JSON):
         """
         Txt2JSON.process_corpus(self)
         if not cutMedia:
-            return
+            return self.all_gloss_list
         mediaDir = os.path.join(self.corpusSettings['corpus_dir'], self.srcExt)
         if 'media_dir' in self.corpusSettings:
             mediaDir = self.corpusSettings['media_dir']
@@ -949,7 +968,23 @@ class Eaf2JSON(Txt2JSON):
                                       usedFilenames=self.usedMediaFiles,
                                       privacySegments=privacySegments)
 
+        return self.all_gloss_list
+
 
 if __name__ == '__main__':
     t2j = Eaf2JSON()
-    t2j.process_corpus(cutMedia=True)
+    all_gloss_list = t2j.process_corpus(cutMedia=True)
+    gloss_set = set(all_gloss_list)
+    gloss_list_file = open('corpus/kadar/gloss_list.txt', 'w+', encoding='utf-8')
+    gloss_list_file_read = gloss_list_file.read()
+    if gloss_list_file_read:
+        gloss_list_file_write = set(gloss_list_file_read.split(' '))
+        gloss_set.update(gloss_list_file_write)
+    gloss_list_file.write(' '.join(gloss_set))
+
+    gramm = open('corpus/kadar/conf_conversion/grammRules.csv', 'w', encoding='utf-8')
+    for gloss in gloss_set:
+        line = gloss + '\t' + gloss.lower() + '\n'
+        gramm.write(line)
+
+

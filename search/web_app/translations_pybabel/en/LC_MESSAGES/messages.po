@@ -1,5 +1,5 @@
 # English translations for Tsakorpus.
-# Copyright (C) 2017-2021 Timofey Arkhangelskiy
+# Copyright (C) 2017-2023 Timofey Arkhangelskiy
 # This file is distributed under the same license as the Tsakorpus project.
 # Timofey Arkhangelskiy <timarkh@gmail.com>, 2017-2021.
 #
@@ -754,6 +754,9 @@ msgstr "statistics"
 msgid "Full text (opens in a new tab)"
 msgstr "Full text (opens in a new tab)"
 
+msgid "Virtual keyboard"
+msgstr "Virtual keyboard"
+
 
 msgid "corpus_title"
 msgstr "Spoken Corpus of Kadar Dargwa"
@@ -788,6 +791,9 @@ msgstr "Armenian"
 msgid "langname_armenian_translit"
 msgstr "Armenian (translit.)"
 
+msgid "langname_bangime"
+msgstr "Bangime"
+
 msgid "langname_bashkir"
 msgstr "Bashkir"
 
@@ -809,11 +815,17 @@ msgstr "Chinese"
 msgid "langname_chuvash"
 msgstr "Chuvash"
 
+msgid "langname_chuvash_cyr"
+msgstr "Chuvash (cyrillic)"
+
 msgid "langname_comments"
 msgstr "comments"
 
 msgid "langname_dargwa"
 msgstr "Dargwa"
+
+msgid "langname_dogon"
+msgstr "Dogon"
 
 msgid "langname_english"
 msgstr "English"
@@ -836,8 +848,17 @@ msgstr "French"
 msgid "langname_german"
 msgstr "German"
 
+msgid "langname_ginyanga"
+msgstr "Ginyanga"
+
+msgid "langname_gizey"
+msgstr "Gizey"
+
 msgid "langname_greek"
 msgstr "Greek"
+
+msgid "langname_guro"
+msgstr "Guro"
 
 msgid "langname_hill_mari"
 msgstr "Hill Mari"
@@ -851,8 +872,14 @@ msgstr "ID"
 msgid "langname_italian"
 msgstr "Italian"
 
+msgid "langname_joola"
+msgstr "Jо́ola (Eegimaa)"
+
 msgid "langname_kadar"
 msgstr "Kadar"
+
+msgid "langname_kafire"
+msgstr "Kafire"
 
 msgid "langname_kalmyk"
 msgstr "Kalmyk"
@@ -878,14 +905,29 @@ msgstr "Komi-Zyrian"
 msgid "langname_latvian"
 msgstr "Latvian"
 
+msgid "langname_limba"
+msgstr "Limba"
+
 msgid "langname_lithuanian"
 msgstr "Lithuanian"
+
+msgid "langname_macedonian"
+msgstr "Macedonian"
+
+msgid "langname_macedonian_cyr"
+msgstr "Macedonian (cyrillic)"
 
 msgid "langname_meadow_mari"
 msgstr "Meadow Mari"
 
 msgid "langname_moksha"
 msgstr "Moksha"
+
+msgid "langname_mundabli"
+msgstr "Mundabli"
+
+msgid "langname_mwan"
+msgstr "Mwan"
 
 msgid "langname_negative"
 msgstr "negative"
@@ -923,8 +965,14 @@ msgstr "Romani"
 msgid "langname_russian"
 msgstr "Russian"
 
+msgid "langname_san"
+msgstr "San"
+
 msgid "langname_selkup"
 msgstr "Selkup"
+
+msgid "langname_senufo"
+msgstr "Senufo"
 
 msgid "langname_spanish"
 msgstr "Spanish"
@@ -941,6 +989,9 @@ msgstr "Tsakhur"
 msgid "langname_tsakonian"
 msgstr "Tsakonian"
 
+msgid "langname_udihe"
+msgstr "Udihe"
+
 msgid "langname_udmurt"
 msgstr "Udmurt"
 
@@ -949,6 +1000,12 @@ msgstr "Ukrainian"
 
 msgid "langname_undefined"
 msgstr "undefined"
+
+msgid "langname_ut-main"
+msgstr "u̠t-Ma'in"
+
+msgid "langname_wan"
+msgstr "Wan"
 
 msgid "langname_yakut"
 msgstr "Yakut"
@@ -1010,11 +1067,17 @@ msgstr "Collector"
 msgid "metafield_country"
 msgstr "Country"
 
+msgid "metafield_date_of_recording"
+msgstr "Date of recording"
+
 msgid "metafield_date_trans"
 msgstr "Date of translation"
 
 msgid "metafield_dialect"
 msgstr "Dialect"
+
+msgid "metafield_filename"
+msgstr "File name"
 
 msgid "metafield_gender"
 msgstr "Gender"
@@ -1085,6 +1148,9 @@ msgstr "Page"
 msgid "metafield_place"
 msgstr "Place"
 
+msgid "metafield_place_of_recording"
+msgstr "Place of recording"
+
 msgid "metafield_post_type"
 msgstr "Post type"
 
@@ -1111,6 +1177,18 @@ msgstr "Sex (post-level)"
 
 msgid "metafield_speaker"
 msgstr "Speaker"
+
+msgid "metafield_speaker_ID"
+msgstr "Speaker ID"
+
+msgid "metafield_speaker_gender"
+msgstr "Gender of the speaker"
+
+msgid "metafield_speaker_type"
+msgstr "Speaker type"
+
+msgid "metafield_speaker_year_of_birth"
+msgstr "Birth year of the speaker"
 
 msgid "metafield_speakers"
 msgstr "Speakers"
@@ -1196,6 +1274,9 @@ msgstr "incompletely"
 msgid "metavalue_interview"
 msgstr "interview"
 
+msgid "metavalue_linguist"
+msgstr "linguist"
+
 msgid "metavalue_male"
 msgstr "male"
 
@@ -1204,6 +1285,9 @@ msgstr "monologue"
 
 msgid "metavalue_movie"
 msgstr "movie"
+
+msgid "metavalue_native"
+msgstr "native"
 
 msgid "metavalue_nonfiction"
 msgstr "non-fiction"

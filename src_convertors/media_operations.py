@@ -172,11 +172,11 @@ class MediaCutter:
 
 
 if __name__ == '__main__':
-    settings = {'corpus_dir': 'corpus/beserman_eaf', 'media_length': 60}
+    settings = {'corpus_dir': 'corpus/kadar/audio', 'media_length': 60}
     mc = MediaCutter(settings)
     for path, dirs, files in os.walk(settings['corpus_dir']):
         for fname in files:
-            if fname.lower().endswith('.mts'):
+            if fname.lower().endswith('.wav'):
                 fname = os.path.abspath(os.path.join(path, fname))
                 print('Starting', fname)
                 mc.cut_media(fname)
