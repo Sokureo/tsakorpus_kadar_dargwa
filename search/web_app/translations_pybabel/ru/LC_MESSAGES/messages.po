@@ -830,6 +830,9 @@ msgstr "чувашский (кириллица)"
 msgid "langname_comments"
 msgstr "комментарии"
 
+msgid "langname_cyrillic"
+msgstr "кириллица"
+
 msgid "langname_dargwa"
 msgstr "даргинский"
 

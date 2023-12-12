@@ -1,1 +1,3 @@
 corpus_title	Устный корпус кадарского даргинского
+langname_kadar	кадарский
+langname_cyrillic	кириллица

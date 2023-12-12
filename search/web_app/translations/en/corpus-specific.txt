@@ -1,1 +1,3 @@
 corpus_title	Spoken Corpus of Kadar Dargwa
+langname_kadar	Kadar
+langname_cyrillic	Cyrillic

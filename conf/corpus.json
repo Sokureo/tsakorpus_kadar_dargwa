@@ -1,5 +1,4 @@
 {
-  "elastic_url": "http://elastic:9200",
   "corpus_name": "kadar",
   "start_page_url": "http://lingconlab.ru/kadar_dargwa/",
   "input_format": "json",
@@ -34,7 +33,7 @@
   "generate_dictionary": true,
   "fulltext_view_enabled": true,
   "use_nonpersistent_fulltext_id": true,
-  "languages": ["kadar", "russian"],
+  "languages": ["kadar", "russian", "cyrillic"],
   "input_methods": ["normal"],
   "interface_languages": [
     "en",
