@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{ _('corpus_title') }}</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+    <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type='text/javascript' src='static/bootstrap-3.3.7-dist/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='static/js/result_parser.js'></script>
+<script type='text/javascript' src='static/js/json_loaders.js'></script>
+<script type='text/javascript' src='static/js/query_share_load.js'></script>
+
+    <!-- Custom styles for this template -->
+    <link href="static/css/resume.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="static/img/favicon.png">
+
+  </head>
+
+  <body id="page-top">
+
+    <p style="padding-left:2.7rem" id="about">
+
+    </p>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">{{ _('corpus_title') }}</span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="static/img/flag.jpg" alt="">
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">{{ _('Главная') }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#itsari">{{ _('Сведения о кадарском диалекте') }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#data">{{ _('Представление данных в корпусе') }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="./search">{{ _('Поиск') }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#authors">{{ _('Создатели') }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#thanks">{{ _('Благодарности') }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#reference">{{ _('Ссылки') }}</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex d-column">
+        <div class="my-auto">
+          <h2 class="mb-0">{{ _('Устный корпус') }}<br>
+            <span class="text-primary" style="color: #0b6cbf !important">{{ _('кадарского диалекта даргинской группы языков (с. Калкни Дахадаевского района Республики Дагестан)') }}</span>
+            <br>
+          </h2>
+            <br>
+            <br>
+            <p class="lead" align="justify">Корпус содержит устные тексты на кадарском диалекте даргинской группы. Настоящий корпус представляет собой один из устных корпусов языков и диалектов даргинской группы (с более подробными сведениями о даргинских языках и о доступных ресурсах можно ознакомиться на сайте <a href="https://www.dargwa.ru/corpora" target="_blank" style="color: #0b6cbf !important">проекта</a>). Тексты снабжены поморфемной грамматической аннотацией, переводом на русский язык. Также пользователям предоставляется возможность прослушать аудиозапись найденных в корпусе примеров.</p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger btn-main" href="./search" style="background-color: #0b6cbf !important">{{ _('К поиску') }}</a>
+          <br>
+          <br>
+        </div>
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="itsari">
+        <div class="my-auto">
+          <h3 class="mb-3">{{ _('Сведения о кадарском диалекте') }}</h3>
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <p class="lead">{{ _('По классификации (Коряков 2021) кадарский идиом представляет собой диалект (наречие) северно-центрально-даргинского языка, однако грамматически кадарский заметно отличается от других севернодаргинских идиомов. На кадарском идиоме говорят в нескольких селениях Буйнакского района Республики Дагестан.') }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="data">
+        <div class="my-auto">
+          <h3 class="mb-3">{{ _('Представление данных в корпусе') }}</h3>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <p class="lead">Тексты в корпусе представлены в кириллической записи, основанной на письменности даргинского литературного языка, и в транскрипции, принятой в исследованиях нахско-дагестанских языков. Глоссирование текстов выполнено на основе транскрипции. Более подробно о соответствии транскрипции орфографической записи можно посмотреть на <a href="https://www.dargwa.ru/transcription" target="_blank" style="color: #0b6cbf !important">соответствующей странице нашего проекта</a>.</p>
+              <p class="lead">Фонологическая система кадарского языка не отличается от системы литературного даргинского, поэтому использование даргинской кириллической письменности не вызывает существенных затруднений. Ретрофлексный звук [<i>ʈ</i>], который звучит на стыке двух фонем /<i>r</i>/, мы не отражаем на письме, так как он не представляет собой самостоятельную фонему.</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="authors">
+        <div class="my-auto">
+            <h3 class="mb-3">{{ _('Создатели') }}</h3>
+            <p class="lead">{{ _('Устные тексты, вошедшие в корпус, собраны в 2020—2022 гг. Наидой Арсланхановной Вагизиевой. Над переводом, аннотированием и глоссированием текстов в основном работала Н. А. Вагизиева под руководством и при участии Н. Р.  Сумбатовой.') }}</p>
+            <p class="lead">{{ _('Техническую подготовку текстов осуществляла Елена Олеговна Сокур. Она выложила корпус на платформу tsakorpus и осуществляет его техническую поддержку.') }}</p>
+        </div>
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="thanks">
+        <div class="my-auto">
+          <h3 class="mb-3">{{ _('Благодарности') }}</h3>
+          <p class="lead">{{ _('Устный корпус кадарского диалекта был подготовлен при поддержке Российского научного фонда, грант РНФ №22-28-01648 «Вариативность в дискурсе и словаре».') }}<br>
+        </div>
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="reference">
+        <div class="my-auto">
+          <h3 class="mb-3">{{ _('Ссылки') }}</h3>
+            <p class="lead"><a href="https://www.dargwa.ru/corpora" target="_blank" style="color: #0b6cbf !important">https://www.dargwa.ru/corpora</a></p>
+        </div>
+      </section>
+
+      <hr class="m-0">
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="static/js/resume.min.js"></script>
+
+  </body>
+
+</html>
