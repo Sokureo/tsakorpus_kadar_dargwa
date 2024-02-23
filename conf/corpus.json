@@ -1,5 +1,4 @@
 {
-  "elastic_url": "http://elastic:9200",
   "corpus_name": "kadar",
   "start_page_url": "http://lingconlab.ru/kadar_dargwa/",
   "input_format": "json",
@@ -15,13 +14,29 @@
   "query_timeout": 60,
   "year_sort_enabled": true,
   "viewable_meta": [
+    "file_name",
+    "title_rus",
+    "title_kadar",
+    "speaker",
+    "recording_date",
+    "comment"
   ],
   "sentence_meta": [
   ],
   "search_meta": {
     "columns": [
+      [
+        {"type": "input_text", "name": "title_rus", "placeholder": "Название текста (русский)"},
+        {"type": "input_text", "name": "title_kadar", "placeholder": "Название текста (кадарский)"}
+      ],
+      [
+        {"type": "input_text", "name": "speaker", "placeholder": "Рассказчик"},
+        {"type": "input_text", "name": "recording_date", "placeholder": "Дата записи"}
+      ]
     ],
     "stat_options": [
+      "file_name",
+      "speaker"
     ]
   },
   "word_fields":

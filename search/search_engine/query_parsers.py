@@ -30,7 +30,7 @@ class InterfaceQueryParser:
             self.rxSimpleText = re.compile(self.settings.regex_simple_search)
         self.wordFields = self.settings.word_fields
         self.wr = WordRelations(settings_dir, rp=rp)
-        self.docMetaFields = ['author', 'title', 'genre']
+        self.docMetaFields = []
         self.docMetaFields += [f for f in self.settings.viewable_meta
                                if f not in self.docMetaFields and f != 'filename'
                                and f not in settings.sentence_meta]

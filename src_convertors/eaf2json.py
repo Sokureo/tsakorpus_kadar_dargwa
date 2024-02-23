@@ -300,6 +300,8 @@ class Eaf2JSON(Txt2JSON):
                         ana['lex'] = contents
                     elif tierType == 'parts':
                         self.parts_list.append(contents)
+                        if '*' in contents and '-' not in contents:
+                            contents = contents + '-'
                         ana['parts'] = contents
                     elif tierType == 'gloss':
                         self.gloss_list.append(contents)
@@ -318,12 +320,12 @@ class Eaf2JSON(Txt2JSON):
         if len(analysisTiers) <= 0 or (len(analysisTiers) == 1 and len(analysisTiers[0]) <= 0):
             return [{}]
         for indx, item in enumerate(self.parts_list):
+            if 'gloss' in ana:
+                ana['gloss'] = ana['gloss'].replace(' (Russ.)', '(Russ.)')
             if item.startswith('-') and 'gloss' in ana and '-' not in ana['gloss'] and '=' not in ana['gloss']:
                 ana['gloss'] = '-' + ana['gloss']
-            elif item.endswith('-') and 'gloss' in ana and '-' not in ana['gloss'] and '=' not in ana['gloss']:
+            if item.endswith('-') and 'gloss' in ana and '-' not in ana['gloss'] and '=' not in ana['gloss']:
                 ana['gloss'] = ana['gloss'] + '-'
-            elif item.startswith('-') and item.endswith('-') and 'gloss' in ana and '-' not in ana['gloss'] and '=' not in ana['gloss']:
-                ana['gloss'] = '-' + ana['gloss'] + '-'
         for combination in itertools.product(*analysisTiers):
             ana = {}
             for partAna in combination:
@@ -357,7 +359,11 @@ class Eaf2JSON(Txt2JSON):
                                 totalAna[k] += '∅'
                             else:
                                 totalAna[k] += ana[k]
-                                if k == 'parts' and not ana[k].startswith('-') and not ana[k].endswith('-'):
+                                if k == 'parts' and ana['parts'].startswith('*'):
+                                    curLex.add(ana['parts'].strip('-'))
+                                    if 'gloss' in ana:
+                                        curStemGloss.add(ana['gloss'].strip('-'))
+                                if k == 'parts' and not ana[k].startswith('-') and not ana[k].endswith('-') and not ana[k].startswith('='):
                                     curLex.add(ana[k])
                                     if 'gloss' in ana:
                                         curStemGloss.add(ana['gloss'])

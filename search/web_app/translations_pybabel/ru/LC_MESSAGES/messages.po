@@ -1076,6 +1076,9 @@ msgstr "место проживания (пост)"
 msgid "metafield_collector"
 msgstr "собиратель"
 
+msgid "metafield_comment"
+msgstr "Комментарий"
+
 msgid "metafield_country"
 msgstr "страна"
 
@@ -1087,6 +1090,9 @@ msgstr "дата перевода"
 
 msgid "metafield_dialect"
 msgstr "диалект"
+
+msgid "metafield_file_name"
+msgstr "Имя файла"
 
 msgid "metafield_filename"
 msgstr "имя файла"
@@ -1175,6 +1181,9 @@ msgstr "издание"
 msgid "metafield_published"
 msgstr "опубликовано"
 
+msgid "metafield_recording_date"
+msgstr "Дата записи"
+
 msgid "metafield_region"
 msgstr "регион"
 
@@ -1226,8 +1235,14 @@ msgstr "заголовок"
 msgid "metafield_title_en"
 msgstr "заголовок (английский)"
 
+msgid "metafield_title_kadar"
+msgstr "Название (кадарский)"
+
 msgid "metafield_title_ru"
 msgstr "заголовок (русский)"
+
+msgid "metafield_title_rus"
+msgstr "Название (русский)"
 
 msgid "metafield_topic"
 msgstr "тема"

@@ -1,3 +1,9 @@
 corpus_title	Spoken Corpus of Kadar Dargwa
 langname_kadar	Kadar
 langname_cyrillic	Cyrillic
+metafield_filename	Filename
+metafield_file_name	Filename
+metafield_title_rus	Title (Russian)
+metafield_title_kadar	Title (Kadar)
+metafield_recording_date	Date of recording
+metafield_comment	Comment
